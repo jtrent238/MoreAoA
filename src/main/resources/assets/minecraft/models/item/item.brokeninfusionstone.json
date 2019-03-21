@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "aoa3:items/slimetopia_realmstone"
+        "layer0": "minecraft:items/broken_infusion_stone"
     }
 }

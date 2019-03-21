@@ -16,17 +16,26 @@ public class ModelRegistryHandler {
  
     @SubscribeEvent
     public static void registerModels(ModelRegistryEvent event) {
-        //registerModel(ModItems.slimetopia_realmstone);
+        registerModel(ModItems.slimetopia_realmstone);
+        registerModel(ModItems.coinIron);
+        registerModel(ModItems.coinClay);
+        registerModel(ModItems.coinPlastic);
+        registerModel(ModItems.coinStone);
+        registerModel(ModItems.ironBowl);
+        registerModel(ModItems.goldBowl);
+        registerModel(ModItems.clayBowl);
+        registerModel(ModItems.powerStoneBroken);
+        registerModel(ModItems.infusionStoneBroken);
         
         //registerModel(Item.getItemFromBlock(ModBlocks.BlockModWeb));
 
     }
  
     private static void registerModel(Item item) {
-        ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
+        ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getUnlocalizedName(), "inventory"));
         
 	    if(Config.debugMode == true) {
-        	System.out.println("Registered Model for: " + item.getRegistryName());
+        	System.out.println("Registered Model for: " + item.getUnlocalizedName());
     	}
     }
  

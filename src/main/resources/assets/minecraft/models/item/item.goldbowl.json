@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "aoa3:items/gold_bowl"
+        "layer0": "minecraft:items/gold_bowl"
     }
 }

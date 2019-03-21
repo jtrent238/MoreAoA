@@ -1,1 +1,9 @@
-item.slimetopia_realmstone.name=Slimetopia Realmstone
+item.SlimetopiaRealmstone.name=Slimetopia Realmstone
+item.PlasticCoin.name=Plastic Coin
+item.ClayCoin.name=Clay Coin
+item.IronCoin.name=Iron Coin
+item.StoneCoin.name=Stone Coin
+item.BrokenPowerStone.name=Broken Power Stone
+item.BrokenInfusionStone.name=Broken Infusion Stone
+
+message.feedback.teleporterFrame.slimetopia=You are about to get your feet sticky.
