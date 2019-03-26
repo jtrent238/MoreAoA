@@ -50,7 +50,21 @@ public class RegistryHandler {
      			//(Item)new ItemBlock(ModBlocks.gateSlime).setRegistryName(ModBlocks.gateSlime.getRegistryName()), 
      			(Item)new ItemBlock(ModBlocks.glassSlimeCovered).setRegistryName(ModBlocks.glassSlimeCovered.getRegistryName()), 
      			(Item)new ItemBlock(ModBlocks.sandSticky).setRegistryName(ModBlocks.sandSticky.getRegistryName()), 
-     			(Item)new ItemBlock(ModBlocks.cropStickyStuff).setRegistryName(ModBlocks.cropStickyStuff.getRegistryName())
+     			(Item)new ItemBlock(ModBlocks.cropStickyStuff).setRegistryName(ModBlocks.cropStickyStuff.getRegistryName()),
+     			(Item)new ItemBlock(ModBlocks.runeWind).setRegistryName(ModBlocks.runeWind.getRegistryName()),
+     			(Item)new ItemBlock(ModBlocks.runeFire).setRegistryName(ModBlocks.runeFire.getRegistryName()),
+     			(Item)new ItemBlock(ModBlocks.runeWater).setRegistryName(ModBlocks.runeWater.getRegistryName()),
+     			(Item)new ItemBlock(ModBlocks.runePoison).setRegistryName(ModBlocks.runePoison.getRegistryName()),
+     			(Item)new ItemBlock(ModBlocks.runeWither).setRegistryName(ModBlocks.runeWither.getRegistryName()),
+     			(Item)new ItemBlock(ModBlocks.runeLunar).setRegistryName(ModBlocks.runeLunar.getRegistryName()),
+     			(Item)new ItemBlock(ModBlocks.runeEnergy).setRegistryName(ModBlocks.runeEnergy.getRegistryName()),
+     			(Item)new ItemBlock(ModBlocks.runeStrike).setRegistryName(ModBlocks.runeStrike.getRegistryName()),
+     			(Item)new ItemBlock(ModBlocks.runeStorm).setRegistryName(ModBlocks.runeStorm.getRegistryName()),
+     			(Item)new ItemBlock(ModBlocks.runeKinetic).setRegistryName(ModBlocks.runeKinetic.getRegistryName()),
+     			(Item)new ItemBlock(ModBlocks.runePower).setRegistryName(ModBlocks.runePower.getRegistryName()),
+     			(Item)new ItemBlock(ModBlocks.runeCompass).setRegistryName(ModBlocks.runeCompass.getRegistryName()),
+     			(Item)new ItemBlock(ModBlocks.runeDistortion).setRegistryName(ModBlocks.runeDistortion.getRegistryName()),
+     			(Item)new ItemBlock(ModBlocks.runeLife).setRegistryName(ModBlocks.runeLife.getRegistryName())
         };
  
         event.getRegistry().registerAll(items);

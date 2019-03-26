@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "normal": [
+      {
+        "model": "minecraft:slime_grass",
+        "texture": "minecraft:blocks/slime_grass"
+      }
+    ]
+  }
+}

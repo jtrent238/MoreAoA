@@ -1,5 +1,7 @@
 package com.jtrent238.moreaoa;
 
+import com.jtrent238.moreaoa.blocks.MyBasicBlock;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder;
@@ -24,7 +26,7 @@ public class ModBlocks {
 
 
 	//dirt blocks
-	public static final DirtBlock dirtSlime = new DirtBlock("SlimeDirt", "slime_dirt");
+	public static final Block dirtSlime = new MyBasicBlock("SlimeDirt", "slime_dirt", Material.GROUND, 0, 0);
 
 	//grass blocks
 	public static final GrassBlock grassSlime = new GrassBlock("SlimeGrass", "slime_grass", dirtSlime);
@@ -70,4 +72,20 @@ public class ModBlocks {
 	//crops
 	public static final CropBlock cropStickyStuff = new CropBlock("StickyStuffCrop", "sticky_stuff_crop");
 
+	//rune blocks
+	public static final BasicBlock runeWind = new BasicBlock("WindRuneBlock", "wind_rune_block", Material.GROUND);
+	public static final BasicBlock runeFire = new BasicBlock("WindFireBlock", "fire_rune_block", Material.GROUND);
+	public static final BasicBlock runeWater = new BasicBlock("WindWaterBlock", "water_rune_block", Material.GROUND);
+	public static final BasicBlock runePoison = new BasicBlock("PoisonRuneBlock", "poison_rune_block", Material.GROUND);
+	public static final BasicBlock runeWither = new BasicBlock("WitherRuneBlock", "wither_rune_block", Material.GROUND);
+	public static final BasicBlock runeLunar = new BasicBlock("LunarRuneBlock", "lunar_rune_block", Material.GROUND);
+	public static final BasicBlock runeEnergy = new BasicBlock("EnergyRuneBlock", "energy_rune_block", Material.GROUND);
+	public static final BasicBlock runeStrike = new BasicBlock("StrikeRuneBlock", "strike_rune_block", Material.GROUND);
+	public static final BasicBlock runeStorm = new BasicBlock("StormRuneBlock", "storm_rune_block", Material.GROUND);
+	public static final BasicBlock runeKinetic = new BasicBlock("KineticRuneBlock", "kinetic_rune_block", Material.GROUND);
+	public static final BasicBlock runePower = new BasicBlock("PowerRuneBlock", "power_rune_block", Material.GROUND);
+	public static final BasicBlock runeCompass = new BasicBlock("CompassRuneBlock", "compass_rune_block", Material.GROUND);
+	public static final BasicBlock runeDistortion = new BasicBlock("DistortionRuneBlock", "distortion_rune_block", Material.GROUND);
+	public static final BasicBlock runeLife = new BasicBlock("LifeRuneBlock", "life_rune_block", Material.GROUND);
+	
 }

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "normal": [
+      {
+        "model": "minecraft:slime_dirt",
+        "texture": "minecraft:blocks/slime_dirt"
+      }
+    ]
+  }
+}
