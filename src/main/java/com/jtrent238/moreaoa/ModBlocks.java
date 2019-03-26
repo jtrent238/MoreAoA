@@ -3,6 +3,8 @@ package com.jtrent238.moreaoa;
 import com.jtrent238.moreaoa.blocks.MyBasicBlock;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockDirt;
+import net.minecraft.block.BlockGrass;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder;
 import net.tslat.aoa3.block.BasicBlock;
@@ -13,6 +15,7 @@ import net.tslat.aoa3.block.decoration.glass.GlassBlock;
 import net.tslat.aoa3.block.decoration.slabs.SlabBlock;
 import net.tslat.aoa3.block.decoration.stairs.StairsBlock;
 import net.tslat.aoa3.block.functional.crops.CropBlock;
+import net.tslat.aoa3.block.functional.portal.PortalBlock;
 import net.tslat.aoa3.block.generation.dirt.DirtBlock;
 import net.tslat.aoa3.block.generation.grass.GrassBlock;
 import net.tslat.aoa3.block.generation.leaves.LeavesBlock;
@@ -26,7 +29,7 @@ public class ModBlocks {
 
 
 	//dirt blocks
-	public static final Block dirtSlime = new MyBasicBlock("SlimeDirt", "slime_dirt", Material.GROUND, 0, 0);
+	public static final DirtBlock dirtSlime = new DirtBlock("SlimeDirt", "slime_dirt");
 
 	//grass blocks
 	public static final GrassBlock grassSlime = new GrassBlock("SlimeGrass", "slime_grass", dirtSlime);
@@ -72,6 +75,9 @@ public class ModBlocks {
 	//crops
 	public static final CropBlock cropStickyStuff = new CropBlock("StickyStuffCrop", "sticky_stuff_crop");
 
+	//portals
+	public static final PortalBlock portalSlimetopia = new PortalBlock("SlimetopiaPortal", "portal_slimetopia", Config.slimetopiaDimID, 198024);
+	
 	//rune blocks
 	public static final BasicBlock runeWind = new BasicBlock("WindRuneBlock", "wind_rune_block", Material.GROUND);
 	public static final BasicBlock runeFire = new BasicBlock("WindFireBlock", "fire_rune_block", Material.GROUND);

@@ -3,10 +3,12 @@ package com.jtrent238.moreaoa.util;
 import com.jtrent238.moreaoa.Config;
 import com.jtrent238.moreaoa.ModBlocks;
 import com.jtrent238.moreaoa.ModItems;
+import com.jtrent238.moreaoa.blocks.MyBasicBlock;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockDirt;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.ModelRegistryEvent;
@@ -72,10 +74,10 @@ public class ModelRegistryHandler {
     }
  
     public static void registerStateMappers() {
-    	ModelLoader.setCustomStateMapper(ModBlocks.dirtSlime, ((SandBlock) ModBlocks.dirtSlime).getStateMapper());
-    	// ModelLoader.setCustomStateMapper(ModBlocks.grassSlime, ModBlocks.grassSlime.getstateMapper());
-    	// ModelLoader.setCustomStateMapper(ModBlocks.stoneSlime, ModBlocks.stoneSlime.getStateMapper());
-    	// ModelLoader.setCustomStateMapper(ModBlocks.oreSlime, ModBlocks.oreSlime.getStateMapper());
+    	//ModelLoader.setCustomStateMapper(ModBlocks.dirtSlime, ((MyBasicBlock) ModBlocks.dirtSlime).getStateMapper());
+    	//ModelLoader.setCustomStateMapper(ModBlocks.grassSlime, ((MyBasicBlock) ModBlocks.grassSlime).getStateMapper());
+    	//ModelLoader.setCustomStateMapper(ModBlocks.stoneSlime, ((MyBasicBlock) ModBlocks.stoneSlime).getStateMapper());
+    	//ModelLoader.setCustomStateMapper(ModBlocks.oreSlime, ((MyBasicBlock) ModBlocks.oreSlime).getStateMapper());
     	// ModelLoader.setCustomStateMapper(ModBlocks.bricksSlime, ModBlocks.bricksSlime.getStateMapper());
     	// ModelLoader.setCustomStateMapper(ModBlocks.leavesSlime, ModBlocks.leavesSlime.getStateMapper());
     	// ModelLoader.setCustomStateMapper(ModBlocks.logSlime, ModBlocks.logSlime.getStateMapper());
@@ -107,6 +109,7 @@ public class ModelRegistryHandler {
     
     private static void registerModel(Item item) {
         ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getUnlocalizedName(), "inventory"));
+        //ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getItemFromBlock(Blocks.ACACIA_FENCE)));
         //ModelLoader.setCustomModelResourceLocation(item, metadata, new ModelResourceLocation(new ResourceLocation("aoa3:" + location + item.getRegistryName().getResourcePath()), null));
 	    if(Config.debugMode == true) {
         	System.out.println("Registered Model for: " + item.getUnlocalizedName());

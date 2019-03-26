@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "minecraft:slimetopia_portal_lat"},
+    "facing=south": { "model": "minecraft:slimetopia_portal_lat", "y": 180},
+    "facing=west": { "model": "minecraft:slimetopia_portal_long"},
+    "facing=east": { "model": "minecraft:slimetopia_portal_long", "y": 180}
+  }
+}

@@ -23,7 +23,7 @@ import net.tslat.aoa3.item.totem.TotemItem;
 public class ModItems {
 
 	//RealmStones
-	public static final Realmstone slimetopia_realmstone = new Realmstone("SlimetopiaRealmstone", "slimetopia_realmstone", BlockRegister.portalCandyland, SoundsRegister.musicKror, "slimetopia");
+	public static final Realmstone slimetopia_realmstone = new Realmstone("SlimetopiaRealmstone", "slimetopia_realmstone", ModBlocks.portalSlimetopia, SoundsRegister.musicKror, "slimetopia");
 	
 	//coins
 	public static final SimpleItem coinIron = new SimpleItem("IronCoin", "iron_coin");
