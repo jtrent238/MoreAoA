@@ -73,7 +73,7 @@ public class ModBlocks {
 	public static final SandBlock sandSticky = new SandBlock("StickySand", "sticky_sand");
 
 	//crops
-	public static final CropBlock cropStickyStuff = new CropBlock("StickyStuffCrop", "sticky_stuff_crop");
+	public static final CropBlock cropStickyStuff = new CropBlock("StickyStuffCrop", "sticky_stuff_crop", false);
 
 	//portals
 	public static final PortalBlock portalSlimetopia = new PortalBlock("SlimetopiaPortal", "portal_slimetopia", Config.slimetopiaDimID, 198024);

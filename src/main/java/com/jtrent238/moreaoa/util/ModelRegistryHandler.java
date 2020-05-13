@@ -36,7 +36,7 @@ public class ModelRegistryHandler {
         registerModel(ModItems.powerStoneBroken);
         registerModel(ModItems.infusionStoneBroken);
         registerModel(ModItems.slabCreepy);
-        registerModel(ModItems.totemMystery);
+        //registerModel(ModItems.totemMystery);
         registerModel(ModItems.seedsStickyStuff);
         
         // ** BLOCKS **

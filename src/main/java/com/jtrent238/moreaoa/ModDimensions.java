@@ -1,6 +1,8 @@
 package com.jtrent238.moreaoa;
 
-import com.jtrent238.moreaoa.dimension.slimetopia.WorldPoviderSlimetopia;
+import org.apache.logging.log4j.Level;
+
+import com.jtrent238.moreaoa.dimension.slimetopia.WorldProviderSlimetopia;
 import com.jtrent238.moreaoa.dimension.slimetopia.WorldTypeSlimetopia;
 import com.jtrent238.moreaoa.dimension.slimetopia.biomes.BiomeSlimetopia;
 
@@ -14,7 +16,7 @@ import net.tslat.aoa3.advent.AdventOfAscension;
 
 public class ModDimensions {
 	  
-	public static DimensionType dimensionSlimetopia = registerDimensionType("slimetopia", "_slimetopia", Config.slimetopiaDimID, WorldPoviderSlimetopia.class, false);
+	public static DimensionType dimensionSlimetopia = registerDimensionType("slimetopia", "_slimetopia", Config.slimetopiaDimID, WorldProviderSlimetopia.class, false);
 
 	public static WorldTypeSlimetopia worldTypeSlimetopia = new WorldTypeSlimetopia();
 
@@ -34,7 +36,7 @@ public class ModDimensions {
 	
 	private static DimensionType registerDimensionType(String name, String suffix, int id, Class<? extends WorldProvider> clazz, boolean keepLoaded) {
 	    if (DimensionManager.isDimensionRegistered(id)) {
-	      AdventOfAscension.getLogger().fatal("Dimension \"" + name + "\" with an id of: " + id + " has failed to load due to ID conflict.");
+	    	AdventOfAscension.logMessage(Level.FATAL, "Dimension \"" + name + "\" with an id of: " + id + " has failed to load due to ID conflict.");
 	      
 	      return null;
 	    }
@@ -42,7 +44,7 @@ public class ModDimensions {
 	    return DimensionType.register(name, suffix, id, clazz, keepLoaded);
 	  }
 	  
-	  private static void registerDimension(int id, DimensionType dimType)
+	  public static void registerDimension(int id, DimensionType dimType)
 	  {
 	    if (dimType != null) {
 	      DimensionManager.registerDimension(id, dimType);

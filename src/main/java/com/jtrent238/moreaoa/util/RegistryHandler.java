@@ -1,24 +1,42 @@
 package com.jtrent238.moreaoa.util;
 
+import java.util.ArrayList;
+
+import com.jtrent238.moreaoa.Config;
 import com.jtrent238.moreaoa.ModBlocks;
+import com.jtrent238.moreaoa.ModDimensions;
 import com.jtrent238.moreaoa.ModItems;
+import com.jtrent238.moreaoa.dimension.slimetopia.biomes.BiomeSlimetopia;
+import com.jtrent238.moreaoa.util.ItemRegister.ItemRegistryWrapper;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.biome.Biome;
+import net.minecraft.world.storage.loot.LootTableList;
 import net.minecraftforge.event.RegistryEvent.Register;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.registries.IForgeRegistry;
+import net.tslat.aoa3.common.registration.BlockRegister;
+import net.tslat.aoa3.common.registration.SoundsRegister;
+import net.tslat.aoa3.item.misc.Realmstone;
 
 @EventBusSubscriber
 public class RegistryHandler {
- 
-    @SubscribeEvent
+
+	public static Biome biomeSlimeTopia;
+	public static ResourceLocation RealmstonebagLoot = registerLootTable("items/RealmstoneBag");
+	BiomeSlimetopia biomeSlimetopia = null;
+
+	@SubscribeEvent
     public static void registerItems(Register<Item> event) {
     	
     	final Item[] items = {
     			//new Realmstone("SlimetopiaRealmstone", "slimetopia_realmstone", BlockRegister.portalCandyland, SoundsRegister.musicGyro, "slimetopia"),
+    			
     			//new SimpleItem("IronCoin", "iron_coin")
      			ModItems.slimetopia_realmstone, 
      			ModItems.coinIron,
@@ -31,8 +49,9 @@ public class RegistryHandler {
      			ModItems.powerStoneBroken,
      			ModItems.infusionStoneBroken,
      			ModItems.slabCreepy,
-     			ModItems.totemMystery,
+     			//ModItems.totemMystery,
      			ModItems.seedsStickyStuff,
+     			ModItems.tokenSlimetopia,
      			
      			(Item)new ItemBlock(ModBlocks.dirtSlime).setRegistryName(ModBlocks.dirtSlime.getRegistryName()), 
      			(Item)new ItemBlock(ModBlocks.grassSlime).setRegistryName(ModBlocks.grassSlime.getRegistryName()), 
@@ -95,4 +114,17 @@ public class RegistryHandler {
         event.getRegistry().registerAll(blocks);
 
     }
+    
+    
+    public static void registerBiomes() {
+    	
+    }
+    
+    public static void registerDimensions() {
+    	ModDimensions.registerDimension(Config.slimetopiaDimID, ModDimensions.dimensionSlimetopia);
+    }
+    
+    private static ResourceLocation registerLootTable(String path) {
+		return LootTableList.register(new ResourceLocation("aoa3", path));
+	}
 }
